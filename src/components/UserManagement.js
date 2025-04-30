@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 const UserManagement = () => {
   const [users, setUsers] = useState([]);
-  const [newUser, setNewUser] = useState({ name: '', email: '', role: '' });
+  const [newUser, setNewUser] = useState({ name: '', email: '', role: '', approved: false });
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -11,7 +11,7 @@ const UserManagement = () => {
 
   const addUser = () => {
     setUsers([...users, newUser]);
-    setNewUser({ name: '', email: '', role: '' });
+    setNewUser({ name: '', email: '', role: '', approved: false });
   };
 
   const editUser = (index, updatedUser) => {
@@ -21,6 +21,11 @@ const UserManagement = () => {
 
   const deleteUser = (index) => {
     const updatedUsers = users.filter((_, i) => i !== index);
+    setUsers(updatedUsers);
+  };
+
+  const approveUser = (index) => {
+    const updatedUsers = users.map((user, i) => (i === index ? { ...user, approved: true } : user));
     setUsers(updatedUsers);
   };
 
@@ -54,9 +59,10 @@ const UserManagement = () => {
       <ul>
         {users.map((user, index) => (
           <li key={index}>
-            {user.name} ({user.email}) - {user.role}
+            {user.name} ({user.email}) - {user.role} - {user.approved ? 'Approved' : 'Pending'}
             <button onClick={() => editUser(index, { ...user, name: 'Updated Name' })}>Edit</button>
             <button onClick={() => deleteUser(index)}>Delete</button>
+            {!user.approved && <button onClick={() => approveUser(index)}>Approve</button>}
           </li>
         ))}
       </ul>

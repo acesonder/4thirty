@@ -9,14 +9,46 @@ const ProfilePreferences = () => {
     fontSize: 'medium',
     language: 'en',
     consent: false,
+    securitySettings: {
+      twoFactorAuth: false,
+      loginHistory: [],
+    },
+    personalization: {
+      colorScheme: 'default',
+      notificationPreferences: {
+        email: true,
+        sms: false,
+      },
+    },
+    accessibility: {
+      screenReader: false,
+      highContrast: false,
+    },
+    privacy: {
+      dataSharing: false,
+      activityLog: [],
+    },
   });
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
-    setProfile({
-      ...profile,
-      [name]: type === 'checkbox' ? checked : value,
-    });
+    const keys = name.split('.');
+    if (keys.length > 1) {
+      setProfile((prevProfile) => {
+        const updatedProfile = { ...prevProfile };
+        let current = updatedProfile;
+        for (let i = 0; i < keys.length - 1; i++) {
+          current = current[keys[i]];
+        }
+        current[keys[keys.length - 1]] = type === 'checkbox' ? checked : value;
+        return updatedProfile;
+      });
+    } else {
+      setProfile({
+        ...profile,
+        [name]: type === 'checkbox' ? checked : value,
+      });
+    }
   };
 
   const saveProfile = () => {
@@ -112,6 +144,103 @@ const ProfilePreferences = () => {
           />
           I agree to the terms and conditions
         </label>
+      </div>
+      <div>
+        <h3>Security Settings</h3>
+        <label>
+          Two-Factor Authentication:
+          <input
+            type="checkbox"
+            name="securitySettings.twoFactorAuth"
+            checked={profile.securitySettings.twoFactorAuth}
+            onChange={handleInputChange}
+          />
+        </label>
+        <div>
+          <h4>Login History</h4>
+          <ul>
+            {profile.securitySettings.loginHistory.map((login, index) => (
+              <li key={index}>{login}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
+      <div>
+        <h3>Personalization</h3>
+        <label>
+          Color Scheme:
+          <select
+            name="personalization.colorScheme"
+            value={profile.personalization.colorScheme}
+            onChange={handleInputChange}
+          >
+            <option value="default">Default</option>
+            <option value="blue">Blue</option>
+            <option value="green">Green</option>
+          </select>
+        </label>
+        <div>
+          <h4>Notification Preferences</h4>
+          <label>
+            Email Notifications:
+            <input
+              type="checkbox"
+              name="personalization.notificationPreferences.email"
+              checked={profile.personalization.notificationPreferences.email}
+              onChange={handleInputChange}
+            />
+          </label>
+          <label>
+            SMS Notifications:
+            <input
+              type="checkbox"
+              name="personalization.notificationPreferences.sms"
+              checked={profile.personalization.notificationPreferences.sms}
+              onChange={handleInputChange}
+            />
+          </label>
+        </div>
+      </div>
+      <div>
+        <h3>Accessibility</h3>
+        <label>
+          Screen Reader:
+          <input
+            type="checkbox"
+            name="accessibility.screenReader"
+            checked={profile.accessibility.screenReader}
+            onChange={handleInputChange}
+          />
+        </label>
+        <label>
+          High Contrast:
+          <input
+            type="checkbox"
+            name="accessibility.highContrast"
+            checked={profile.accessibility.highContrast}
+            onChange={handleInputChange}
+          />
+        </label>
+      </div>
+      <div>
+        <h3>Privacy</h3>
+        <label>
+          Data Sharing:
+          <input
+            type="checkbox"
+            name="privacy.dataSharing"
+            checked={profile.privacy.dataSharing}
+            onChange={handleInputChange}
+          />
+        </label>
+        <div>
+          <h4>Activity Log</h4>
+          <ul>
+            {profile.privacy.activityLog.map((activity, index) => (
+              <li key={index}>{activity}</li>
+            ))}
+          </ul>
+        </div>
       </div>
       <button onClick={saveProfile}>Save Profile</button>
     </div>
