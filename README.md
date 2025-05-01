@@ -4,16 +4,16 @@ WHAT IS OUTSINC
 
 
 1. What Is OUTSINC?
-* Name & Meaning OUTSINC stands for Outreach Someone IN Change, highlighting the commitment to meet people “where they are” and help them move toward positive life changes.
-* Founders & Structure Founded by Chance (Ace) Brown and London, OUTSINC operates as a volunteer-based, non-profit outreach collective in Cobourg, Ontario. It’s grassroots-funded—relying on small grants, community donations, and in-kind support—so every dollar directly serves someone in need.
+* Name & MeaningOUTSINC stands for Outreach Someone IN Change, highlighting the commitment to meet people “where they are” and help them move toward positive life changes.
+* Founders & StructureFounded by Chance (Ace) Brown and London, OUTSINC operates as a volunteer-based, non-profit outreach collective in Cobourg, Ontario. It’s grassroots-funded—relying on small grants, community donations, and in-kind support—so every dollar directly serves someone in need.
 * Philosophy
     * Low-Barrier & Non-Judgmental: No questions about housing status or substance use—everyone’s welcome.
     * Person-Centered & Empowering: Clients set their own goals; staff walk alongside them.
     * Collaborative: Deep partnerships with local shelters, health clinics, mental-health agencies, Indigenous support networks, and municipal services.
 
 2. Mission, Vision & Values
-* Mission To provide comprehensive, compassionate outreach and essential supports (harm reduction, mental-health assistance, housing navigation, and community connection) for individuals facing homelessness, substance-use challenges, and acute life crises.
-* Vision A community where no one falls through the cracks—where everyone has reliable access to basic needs and the supports that foster lasting stability.
+* MissionTo provide comprehensive, compassionate outreach and essential supports (harm reduction, mental-health assistance, housing navigation, and community connection) for individuals facing homelessness, substance-use challenges, and acute life crises.
+* VisionA community where no one falls through the cracks—where everyone has reliable access to basic needs and the supports that foster lasting stability.
 * Core Values
     1. Dignity & Respect: Treat every person as a full human being with strengths and aspirations.
     2. Self-Determination: Encourage and support clients to lead decision-making about their own lives.
@@ -66,11 +66,11 @@ While much of OUTSINC’s work happens face-to-face, its digital backbone ensure
     * Role-based access (admins, outreach staff, partner-agency liaisons)
 
 5. Organizational Roles & Volunteer Opportunities
-* Street Outreach Workers Deliver supplies, build rapport, identify urgent needs.
-* Peer Support Volunteers Facilitate support circles, share lived-experience insights.
-* Case Coordinators Manage client follow-up, housing paperwork, referral tracking.
-* Digital & Admin Team Maintain the platform, generate reports, handle communications.
-* Fundraising & Events Crew Plan community drives, donor relations, grant applications.
+* Street Outreach WorkersDeliver supplies, build rapport, identify urgent needs.
+* Peer Support VolunteersFacilitate support circles, share lived-experience insights.
+* Case CoordinatorsManage client follow-up, housing paperwork, referral tracking.
+* Digital & Admin TeamMaintain the platform, generate reports, handle communications.
+* Fundraising & Events CrewPlan community drives, donor relations, grant applications.
 
 6. Funding, Sustainability & Partnerships
 * Revenue Streams
@@ -84,14 +84,14 @@ While much of OUTSINC’s work happens face-to-face, its digital backbone ensure
     * Fleming College (student placements, research collaborations)
 
 7. Impact & Future Directions
-* Current Reach Serving dozens of individuals weekly with supplies, dozens more through housing supports.
-* Success Stories Clients who’ve moved into stable housing, achieved reduction goals, reconnected with family.
+* Current ReachServing dozens of individuals weekly with supplies, dozens more through housing supports.
+* Success StoriesClients who’ve moved into stable housing, achieved reduction goals, reconnected with family.
 * Growth Plans
     * Expand digital platform to include a client mobile app with GPS-mapped resource finder
     * Launch a “Community Voices” podcast to share client experiences and policy discussions
     * Advocate at the municipal level for sanctioned encampment spaces and low-barrier shelters
 
-Why OUTSINC Matters In a small town where formal systems often overlook the most vulnerable, OUTSINC’s nimble, person-centered approach fills critical gaps—providing not just supplies, but genuine human connection, advocacy, and pathways to lasting change.
+Why OUTSINC MattersIn a small town where formal systems often overlook the most vulnerable, OUTSINC’s nimble, person-centered approach fills critical gaps—providing not just supplies, but genuine human connection, advocacy, and pathways to lasting change.
 
 
 
@@ -267,9 +267,9 @@ Advocacy consent for staff follow-up
 
 Referral tracking and outcome documentation
 
-—— END OF PLATFORM OVERVIEW  
+—— END OF PLATFORM OVERVIEW 
 
-  
+
 
 
 Cleaned Project Brief: OUTSINC Ecosystem
@@ -278,7 +278,7 @@ Cleaned Project Brief: OUTSINC Ecosystem
 * Purpose: A comprehensive, web-based ecosystem designed to support individuals experiencing homelessness, addiction, mental health struggles, and social barriers. It serves as a central hub integrating specialized modules for clients, staff, outreach workers, service providers, and administrators.
 
 
-* Technology Stack: PHP, MySQL (via phpMyAdmin), HTML, CSS, Minimal JavaScript (for UI interactions like menus, basic animations).
+* Technology Stack: REACT, PHP, SQL, HTML, JS.
 
 * Design: Modern, mobile-responsive, user-friendly, visually engaging (using animations, shadows, gradients, clear iconography - e.g., FontAwesome), and adhering to Trauma-Informed UX principles (calm colors, simple workflows). Style reference: navbar.html (logo left, time, colors, animations).
 
@@ -303,15 +303,6 @@ Cleaned Project Brief: OUTSINC Ecosystem
     * Submit and track referrals in real-time.
     * Identify service gaps.
     * Provider directory and smart matching.
-* (Core) ASK – Support & Crisis Communication:
-    * Real-time, empathetic support chat (anonymous or linked).
-    * Audio messaging support (low-literacy friendly).
-    * Quick access to crisis contacts/resources.
-    * Searchable FAQ/article base.
-* (Core) BLES – Specialized Intake (Addiction Focus) & Recovery Support:
-    * Streamlined intake form for addiction-related support (risk evaluation, consent, urgency flags).
-    * Direct connection to partner programs (e.g., treatment beds).
-    * Recovery tools and progress tracking specific to substance use.
 * (Core) ETHAN – Client Wellness & Growth:
     * Tools for daily routines, self-awareness, and positivity (mood tracker, journals, learning modules, habit builder).
     * Badges, positive feedback, and encouragement system.
